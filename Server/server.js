@@ -27,20 +27,20 @@ app.get("/", (req, res) => {
   res.send("Welcome on board");
 });
 // Nodemailer Transporter
-// const transporter = nodemailer.createTransport({
-//   service: "gmail", // Replace with your email provider
-//   auth: {
-//     user: "kolawoledolapo115@gmail.com",
-//     pass: "jixschjrfqdmaqjz",
-//   },
-// });
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  service: "gmail", // Replace with your email provider
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    user: "kolawoledolapo115@gmail.com",
+    pass: "jixschjrfqdmaqjz",
   },
 });
+// const transporter = nodemailer.createTransport({
+//   service: "gmail",
+//   auth: {
+//     user: process.env.EMAIL_USER,
+//     pass: process.env.EMAIL_PASS,
+//   },
+// });
 
 // API endpoint to send email
 app.post("/send-email", (req, res) => {
