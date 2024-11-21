@@ -1,0 +1,93 @@
+/* .custom-carousel {
+  height: 650px;
+} */
+ .ome {
+   position: relative;
+ }
+
+.Home img {
+  object-fit: cover;
+  height: 650px;
+}
+.Home {
+  position: relative;
+
+}
+.Home::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(225, 45, 168, 0.336);
+  /* background-color: rgba(7, 7, 7, 0.432); */
+}
+
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  border-radius: 20px 20px 20px 20px;
+  padding: 35px 35px;
+  background-color: rgba(225, 45, 168, 0.664);
+  box-shadow: white 1px 1px 1px;
+}
+
+.center h2,
+p {
+  color: white;
+}
+
+.angels {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.founder h1 {
+  font-weight: bold;
+  font-size: 42px;
+  text-align: center;
+  color: #777;
+}
+.founder p {
+  color: #777;
+  font-weight: bold;
+  font-size: 18px;
+}
+.mummy img {
+  width: 15%;
+  border-radius: 60%;
+  margin-left: 520px;
+  border: 7px solid rgb(177, 7, 115);
+  margin-top: 20px;
+  margin-bottom: -20px;
+}
+.feast {
+  background-color: #d6d3d3;
+}
+
+.fluid {
+  background-color: #dddadc;
+}
+.select p {
+  color: #777;
+  font-weight: bold;
+  font-size: 16px;
+
+}
+.select {
+  margin-top: 60px;
+  padding-bottom: 30px;
+} 
+
+.mc p{
+  color:#717070;
+  font-weight: bold;
+}
+

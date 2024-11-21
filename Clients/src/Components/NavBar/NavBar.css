@@ -1,0 +1,51 @@
+.nav.has-sticky.sticky-jump {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+}
+.nav {
+  background-color: white;
+}
+
+.navs {
+  margin: auto;
+}
+
+.board {
+  border: 5px solid rgb(200, 14, 145);
+}
+
+.feast {
+  display: inline;
+  margin-top: 10px;
+  font-weight: bold;
+  color: rgb(200, 14, 145);
+  font-size: 20px;
+}
+
+.feel {
+  color: rgb(200, 14, 145);
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: rgb(200, 14, 145);
+  /* Change text color for links */
+}
+
+.nav-link:hover {
+  border-bottom: 2px solid rgb(196, 13, 132);
+}
+
+.navbar-nav .nav-link.active {
+  background-color: rgb(163, 26, 122);
+  color: white;
+  border-radius: 10px;
+}
+
+.name {
+  text-decoration: none;
+}
