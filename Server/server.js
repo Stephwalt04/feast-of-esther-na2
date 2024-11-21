@@ -27,11 +27,18 @@ app.get("/", (req, res) => {
   res.send("Welcome on board");
 });
 // Nodemailer Transporter
+// const transporter = nodemailer.createTransport({
+//   service: "gmail", // Replace with your email provider
+//   auth: {
+//     user: "kolawoledolapo115@gmail.com",
+//     pass: "jixschjrfqdmaqjz",
+//   },
+// });
 const transporter = nodemailer.createTransport({
-  service: "gmail", // Replace with your email provider
+  service: "gmail",
   auth: {
-    user: "kolawoledolapo115@gmail.com",
-    pass: "jixschjrfqdmaqjz",
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
   },
 });
 
