@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: "https://your-frontend.vercel.app", // Update to your frontend's domain
+    origin: "https://feastofesther2.vercel.app/", // Update to your frontend's domain
     methods: ["GET", "POST"],
     credentials: true,
   })
