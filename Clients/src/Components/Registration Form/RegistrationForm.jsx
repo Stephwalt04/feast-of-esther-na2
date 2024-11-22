@@ -90,7 +90,10 @@ const RegistrationForm = () => {
 
   const registerUser = async (formData) => {
     try {
-      let res = await axios.post("http://localhost:3001/admin/users", formData);
+      let res = await axios.post(
+        "https://feastofestherapi.vercel.app/api/submit-form",
+        formData
+      );
       console.log(res.data);
     } catch (error) {
       console.log(error);

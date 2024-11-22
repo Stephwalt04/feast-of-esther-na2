@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: "https://feastofesther2.vercel.app/", // Update to your frontend's domain
+    origin: "https://feastofesther2.vercel.app/",
     methods: ["GET", "POST"],
     credentials: true,
   })
@@ -17,6 +17,14 @@ app.use(
 // Root API Route
 app.get("/api", (req, res) => {
   res.send("API is working!");
+});
+
+const transporter = nodemailer.createTransport({
+  service: "gmail", // Replace with your email provider
+  auth: {
+    user: "kolawoledolapo115@gmail.com",
+    pass: "jixschjrfqdmaqjz",
+  },
 });
 
 // Admin Routes
