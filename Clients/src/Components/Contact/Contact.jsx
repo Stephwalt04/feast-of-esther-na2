@@ -34,7 +34,7 @@ const Contact = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:3001/send-email",
+        "https://feastofestherapi.vercel.app/api/send-email",
         formData
       );
 

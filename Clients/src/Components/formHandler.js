@@ -1,12 +1,15 @@
 export const submitForm = async (formData) => {
   try {
-    const response = await fetch("http://localhost:3001/submit-form", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    const response = await fetch(
+      "https://feastofestherapi.vercel.app/api/submit-form",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    );
 
     if (response.ok) {
       const result = await response.json();

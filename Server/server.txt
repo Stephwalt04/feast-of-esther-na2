@@ -6,24 +6,37 @@ const adminRouter = require("./routes/adminRoute");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
+
+app.use("/admin", adminRouter);
+
 app.use(
   cors({
-    origin: "https://your-frontend.vercel.app", // Update to your frontend's domain
+    origin: "http://localhost:3000",
     methods: ["GET", "POST"],
     credentials: true,
   })
 );
 
-// Root API Route
-app.get("/api", (req, res) => {
-  res.send("API is working!");
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send("Something broke!");
 });
 
-// Admin Routes
-app.use("/api/admin", adminRouter);
+app.get("/", (req, res) => {
+  res.send("Welcome on board");
+});
+// Nodemailer Transporter
+const transporter = nodemailer.createTransport({
+  service: "gmail", // Replace with your email provider
+  auth: {
+    user: "kolawoledolapo115@gmail.com",
+    pass: "jixschjrfqdmaqjz",
+  },
+});
 
-// Send Email Route
-app.post("/api/send-email", (req, res) => {
+// API endpoint to send email
+app.post("/send-email", (req, res) => {
   const { name, email, message } = req.body;
 
   const mailOptions = {
@@ -41,14 +54,8 @@ app.post("/api/send-email", (req, res) => {
   });
 });
 
-// Error Handling Middleware
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send("Something broke!");
-});
-
-// Start Server
 const port = process.env.PORT || 3001;
+
 app.listen(port, () => {
-  console.log(`App listening at http://localhost:${port}`);
+  console.log(`App listening to http://localhost:${port}`);
 });
